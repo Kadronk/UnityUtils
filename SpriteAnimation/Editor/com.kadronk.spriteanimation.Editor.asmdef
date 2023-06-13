@@ -1,7 +1,9 @@
 {
-    "name": "com.kadronk.prefabplacer",
-    "rootNamespace": "Kadronk.PrefabPlacer.Editor",
-    "references": [],
+    "name": "com.kadronk.spriteanimation.Editor",
+    "rootNamespace": "Kadronk.SpriteAnimation.Editor",
+    "references": [
+        "GUID:3d0f78142501fd540a5f54188b5fce23"
+    ],
     "includePlatforms": [
         "Editor"
     ],

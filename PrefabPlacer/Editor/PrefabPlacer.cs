@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Kadronk.Editor
+namespace Kadronk.PrefabPlacer.Editor
 {
     public class PrefabPlacer : EditorWindow
     {

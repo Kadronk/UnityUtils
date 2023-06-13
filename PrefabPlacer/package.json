@@ -1,6 +1,6 @@
 {
   "name": "com.kadronk.prefabplacer",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "displayName": "Prefab placer",
   "description": "A tool for quick prefab placement, to help level artists. Comes with options to randomize placement and prefab selection.",
   "licensesUrl": "https://github.com/Kadronk/UnityUtils/blob/main/LICENSE",

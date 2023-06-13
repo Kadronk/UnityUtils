@@ -1,10 +1,8 @@
 {
-    "name": "com.kadronk.prefabplacer",
-    "rootNamespace": "Kadronk.PrefabPlacer.Editor",
+    "name": "com.kadronk.spriteanimation",
+    "rootNamespace": "Kadronk.SpriteAnimation",
     "references": [],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
