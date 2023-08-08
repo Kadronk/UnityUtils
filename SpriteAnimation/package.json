@@ -1,8 +1,8 @@
 {
   "name": "com.kadronk.spriteanimation",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "displayName": "Frame-by-frame Sprite Animation",
-  "description": "Animation package for frame-by-frame sprite animation.\nBased on Unity's \"Animation -> Animator Controller -> Animator\" pipeline, but without the superfluous stuff that is often only used for 3d animation.\n\nTo create animation assets, Right click in the Project window > 2D > \"Frame-by-frame Animation\" (equivalent to Unity's Animations) and \"Frame-by-frame Animation Collection\" (equivalent to Unity's Animation Controllers).\nTo animate a Sprite Renderer, add a \"Sprite Animator\" on the GameObject, and add the drag'n'drop in an Animation Collection.",
+  "description": "Animation package for frame-by-frame sprite animation.\nBased on Unity's \"Animation -> Animator Controller -> Animator\" pipeline, but without the superfluous stuff that is often only used for 3d animation.\n\nTo create animation assets, Right click in the Project window > 2D > \"Frame-by-frame Animation\" (equivalent to Unity's Animations) and \"Frame-by-frame Animation Collection\" (equivalent to Unity's Animation Controllers).\nTo animate a Sprite Renderer, add a \"Sprite Animator\" on the GameObject, and add the drag'n'drop in an Animation Collection.\nTo animate an UI Image, same thing with an \"Image Animator\".",
   "licensesUrl": "https://github.com/Kadronk/UnityUtils/blob/main/SpriteAnimation/LICENSE",
   "keywords": [
     "sprite",

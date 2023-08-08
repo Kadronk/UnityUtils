@@ -104,7 +104,11 @@ namespace Kadronk.SpriteAnimation.Editor
             {
                 _isPlaying = !_isPlaying;
                 if (_isPlaying)
+                {
+                    if (_currentFrameIndex >= _propFrames.arraySize - 1)
+                        SetCurrentFrame(0);
                     RefreshLastTime();
+                }
             }
             if (GUI.Button(new Rect(rectTemp.x + rectTemp.width * 0.66f, rectTemp.y, rectTemp.width * 0.33f, rectTemp.height), "→") && IsFrameOffsetWithinRange(1))
                 SetCurrentFrame(_currentFrameIndex+1);
