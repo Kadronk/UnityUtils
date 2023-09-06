@@ -24,17 +24,19 @@ namespace Kadronk.PolymorphicFields.Editor
                     SelectTypeMenu();
                 }
 
-                switch (((PolymorphableAttribute)attribute).Style)
-                {
-                    case LabelStyle.Append:
-                        label.text += $" ({property.managedReferenceValue.GetType().GetDisplayName()})";
-                        break;
-                    case LabelStyle.Replace:
-                        label.text = property.managedReferenceValue.GetType().GetDisplayName();
-                        break;
-                    case LabelStyle.Empty:
-                        label = GUIContent.none;
-                        break;
+                if (attribute != null) {
+                    switch (((PolymorphableAttribute)attribute).Style)
+                    {
+                        case LabelStyle.Append:
+                            label.text += $" ({property.managedReferenceValue.GetType().GetDisplayName()})";
+                            break;
+                        case LabelStyle.Replace:
+                            label.text = property.managedReferenceValue.GetType().GetDisplayName();
+                            break;
+                        case LabelStyle.Empty:
+                            label = GUIContent.none;
+                            break;
+                    }
                 }
 
                 EditorGUI.PropertyField(position, property, label, true);
@@ -50,7 +52,7 @@ namespace Kadronk.PolymorphicFields.Editor
 
             void SelectTypeMenu() {
                 List<Type> types = new List<Type>(fieldInfo.FieldType.GetSubtypes());
-                if (((PolymorphableAttribute)attribute).IncludeParent) {
+                if (attribute != null && ((PolymorphableAttribute)attribute).IncludeParent) {
                     ++types.Capacity;
                     types.Insert(0, fieldInfo.FieldType);
                 }
