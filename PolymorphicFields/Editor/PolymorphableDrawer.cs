@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
@@ -51,10 +52,15 @@ namespace Kadronk.PolymorphicFields.Editor
             }
 
             void SelectTypeMenu() {
-                List<Type> types = new List<Type>(fieldInfo.FieldType.GetSubtypes());
+                Type parentType = fieldInfo.FieldType;
+                if (parentType.IsArray)
+                    parentType = parentType.GetElementType();
+                else if (parentType.GetGenericTypeDefinition() == typeof(List<>))
+                    parentType = parentType.GetGenericArguments()[0];
+                List<Type> types = new List<Type>(parentType.GetSubtypes());
                 if (attribute != null && ((PolymorphableAttribute)attribute).IncludeParent) {
                     ++types.Capacity;
-                    types.Insert(0, fieldInfo.FieldType);
+                    types.Insert(0, parentType);
                 }
                 string[] typesStr = new string[types.Count];
                 for (int i = 0; i < types.Count; i++) {
