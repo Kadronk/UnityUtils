@@ -55,7 +55,7 @@ namespace Kadronk.PolymorphicFields.Editor
                 Type parentType = fieldInfo.FieldType;
                 if (parentType.IsArray)
                     parentType = parentType.GetElementType();
-                else if (parentType.GetGenericTypeDefinition() == typeof(List<>))
+                else if (parentType.IsGenericType && parentType.GetGenericTypeDefinition() == typeof(List<>))
                     parentType = parentType.GetGenericArguments()[0];
                 List<Type> types = new List<Type>(parentType.GetSubtypes());
                 if (attribute != null && ((PolymorphableAttribute)attribute).IncludeParent) {

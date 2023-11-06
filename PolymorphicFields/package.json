@@ -1,6 +1,6 @@
 {
   "name": "com.kadronk.polymorphicfields",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "displayName": "Polymorphic Fields",
   "description": "Adds the [Polymorphable] field attribute, which adds a button next to the property that allows you to choose its type (among the subtypes of its declaring type). Applies to array elements when used on an array/list. The field must have the [SerializeReference] attribute too.\nAdds the PolymorphicList<T> class, a ReorderableList wrapper that allows easy addition of elements typed with a subtype of T. It is recommended to only use them in custom editors (and NOT in property drawers).",
   "licensesUrl": "https://github.com/Kadronk/UnityUtils/blob/main/PolymorphicFields/LICENSE",
